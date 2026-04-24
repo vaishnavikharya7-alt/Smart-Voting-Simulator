@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import ScrollToTop from './components/ScrollToTop';
 import { LanguageProvider } from './contexts/LanguageContext';
 import HomePage from './pages/HomePage';
@@ -24,6 +25,7 @@ function App() {
           <Route path="/chatbot" element={<ChatbotPage />} />
           <Route path="/fake-news" element={<FakeNewsPage />} />
         </Routes>
+        <Analytics />
       </Router>
     </LanguageProvider>
   );
